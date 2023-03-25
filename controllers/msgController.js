@@ -1,6 +1,7 @@
 exports.startSession = async (req, res) => {
     try {
-        const { Client, MessageMedia } = require('whatsapp-web.js');
+        res.send('Hola mundo')
+        /* const { Client, MessageMedia } = require('whatsapp-web.js');
 
         var data = req.body.data;
         var msg = req.body.message;
@@ -25,7 +26,7 @@ exports.startSession = async (req, res) => {
         });
 
         client.initialize(); 
-
+ */
     } catch (error) {
         console.log(error);
         res.send({ status: 0, msg: "ERROR: Ha ocurrido un error inesperado al crear el usuario, porfavor verifique y vuelva a intentarlo." });
