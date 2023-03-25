@@ -7,7 +7,7 @@ const bodyparser = require('body-parser');
 app.use(cors());
 app.use(express.json({limit: '50mb'}));
 
-app.use('/api/messages', require('./routes/messages'));
+app.use('/.netlify/functions/api/messages', require('../routes/messages'));
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({limit: '50mb', extended: false }));
