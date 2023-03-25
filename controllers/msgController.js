@@ -1,6 +1,6 @@
 exports.startSession = async (req, res) => {
     try {
-        res.send('Hola mundo')
+        res.json({data: 'Hola mundo'})
         /* const { Client, MessageMedia } = require('whatsapp-web.js');
 
         var data = req.body.data;
