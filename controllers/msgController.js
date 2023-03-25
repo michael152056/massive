@@ -1,17 +1,15 @@
 exports.startSession = async (req, res) => {
     try {
-       /*  const { Client, MessageMedia } = require('whatsapp-web.js'); */
+        const { Client, MessageMedia } = require('whatsapp-web.js');
 
         var data = req.body.data;
         var msg = req.body.message;
         var img = (req.body.image).split(',')[1];
+        
+        const imageMedia = new MessageMedia('image/jpeg', img);
+        
 
-        res.json({data: data, msg: msg, img: img})
-        
-      /*   const imageMedia = new MessageMedia('image/jpeg', img);
-        
- */
-     /* 
+     
        const client = new Client();
 
         client.on('qr', (qr) => {
@@ -26,7 +24,7 @@ exports.startSession = async (req, res) => {
             }
         });
 
-        client.initialize();  */
+        client.initialize(); 
 
     } catch (error) {
         console.log(error);
